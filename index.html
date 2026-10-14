@@ -3,191 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulación Multi-pantalla Premium</title>
-
-    <!-- ENLACES CORREGIDOS (HTTPS): Cargan la librería de forma segura para que no se bloquee -->
-    <link rel="stylesheet" href="https://jquery.com" />
-    <script src="https://jquery.com"></script>
-    <script src="https://jquery.com"></script>
-    
-    <!-- FUENTE ELEGANTE DE GOOGLE -->
-    <link rel="preconnect" href="https://googleapis.com">
-    <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Inicio - App Premium</title>
+    <!-- jQuery Mobile Local -->
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://googleapis.com" rel="stylesheet">
 
     <style>
-        /* DISEÑO DE APLICACIÓN MODERNA */
+        /* ESTILOS PREMIUM EXCLUSIVOS */
         body, .ui-page {
             font-family: 'Poppins', sans-serif !important;
-            background: #7180D4 !important; /* El color azul/morado que te gustaba */
+            background: linear-gradient(135deg, #4f46e5, #7180D4) !important;
         }
-        
-        .contenedor-principal {
-            padding: 25px 20px !important;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .ui-header {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: none !important;
+            backdrop-filter: blur(10px);
         }
-
-        /* TÍTULOS EN GRANDE Y BONITOS */
-        .titulo-pantalla {
-            font-size: 32px !important;
-            font-weight: 600 !important;
+        .ui-header .ui-title {
             color: #ffffff !important;
-            text-shadow: 0px 2px 4px rgba(0,0,0,0.2) !important;
-            margin: 10px 0 25px 0 !important;
+            font-weight: 600 !important;
+            text-shadow: none !important;
+        }
+        .tarjeta-bienvenida {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 20px;
+            border-radius: 20px;
+            margin: 50px auto 0 auto;
+            max-width: 400px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             text-align: center;
         }
-
-        /* BOTÓN REGRESAR ESTILO PREMIUM */
-        .btn-regresar a {
-            background: rgba(255, 255, 255, 0.25) !important;
-            color: #ffffff !important;
-            border: 1px solid rgba(255, 255, 255, 0.4) !important;
-            border-radius: 12px !important;
-            padding: 12px 35px !important;
-            font-weight: 600 !important;
-            text-shadow: none !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
-            transition: all 0.2s ease !important;
-            text-decoration: none !important;
-            margin-bottom: 30px !important;
-            display: inline-block;
+        .tarjeta-bienvenida h2 {
+            color: #1e1b4b;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
-        
-        .btn-regresar a:hover {
-            background: rgba(255, 255, 255, 0.4) !important;
-            transform: translateY(-2px) !important;
+        .tarjeta-bienvenida p {
+            color: #4b5563;
+            font-size: 14px;
+            line-height: 1.6;
         }
-
-        /* LISTA INTERACTIVA (ESTILO TARJETAS COMPACTAS) */
-        .ui-listview-inset {
-            margin: 0 !important;
-            width: 100% !important;
-            max-width: 450px !important;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-            border-radius: 16px !important;
-            overflow: hidden !important;
-        }
-
-        .ui-listview>.ui-li-static, .ui-listview>li>a.ui-btn {
+        /* NAVBAR ESTILIZADO */
+        .ui-footer {
             background: #ffffff !important;
-            color: #2D3748 !important;
-            border-bottom: 1px solid #E2E8F0 !important;
-            padding: 18px 20px !important;
-            font-size: 16px !important;
-            font-weight: 400 !important;
-            text-shadow: none !important;
-            transition: background 0.2s !important;
+            border: none !important;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
         }
-
-        .ui-listview>li>a.ui-btn:hover {
-            background: #F7FAFC !important;
-            color: #4A5568 !important;
+        .ui-navbar th a, .ui-navbar li a {
+            background: #ffffff !important;
+            color: #6b7280 !important;
+            text-shadow: none !important;
+            font-weight: 600 !important;
+            border: none !important;
+            padding: 15px 0 !important;
+        }
+        .ui-navbar li a.ui-btn-active {
+            color: #4f46e5 !important;
+            border-bottom: 3px solid #4f46e5 !important;
         }
     </style>
 </head>
 <body>
 
-    <!-- ================= PANTALLA 1 ================= -->
-    <div data-role="page" id="pantalla-1">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 1</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-6">← Regresar</a>
-            </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-2">Pantalla 2</a></li>
-                <li><a href="#pantalla-3">Pantalla 3</a></li>
-                <li><a href="#pantalla-4">Pantalla 4</a></li>
-                <li><a href="#pantalla-5">Pantalla 5</a></li>
-                <li><a href="#pantalla-6">Pantalla 6</a></li>
-            </ul>
+    <div data-role="page" id="inicio">
+        <div data-role="header" data-position="fixed">
+            <h1>MI APP PREMIUM</h1>
         </div>
-    </div>
 
-    <!-- ================= PANTALLA 2 ================= -->
-    <div data-role="page" id="pantalla-2">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 2</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-1">← Regresar</a>
+        <div data-role="main" class="ui-content">
+            <div class="tarjeta-bienvenida">
+                <h2>¡Bienvenido! 👋📱</h2>
+                <p>Estás en el panel principal. Navega de forma interactiva y visual a través del menú inferior.</p>
             </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-1">Pantalla 1</a></li>
-                <li><a href="#pantalla-3">Pantalla 3</a></li>
-                <li><a href="#pantalla-4">Pantalla 4</a></li>
-                <li><a href="#pantalla-5">Pantalla 5</a></li>
-                <li><a href="#pantalla-6">Pantalla 6</a></li>
-            </ul>
         </div>
-    </div>
 
-    <!-- ================= PANTALLA 3 ================= -->
-    <div data-role="page" id="pantalla-3">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 3</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-2">← Regresar</a>
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="index.html" data-icon="home" class="ui-btn-active ui-state-persist">Inicio</a></li>
+                    <li><a href="pantalla1.html" data-icon="grid">Pantalla1</a></li>
+                    <li><a href="pantalla2.html" data-icon="grid">Pantalla2</a></li>
+                    <li><a href="pantalla3.html" data-icon="grid">Pantalla3</a></li>
+                    <li><a href="pantalla4.html" data-icon="grid">Pantalla4</a></li>
+                </ul>
             </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-1">Pantalla 1</a></li>
-                <li><a href="#pantalla-2">Pantalla 2</a></li>
-                <li><a href="#pantalla-4">Pantalla 4</a></li>
-                <li><a href="#pantalla-5">Pantalla 5</a></li>
-                <li><a href="#pantalla-6">Pantalla 6</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ================= PANTALLA 4 ================= -->
-    <div data-role="page" id="pantalla-4">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 4</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-3">← Regresar</a>
-            </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-1">Pantalla 1</a></li>
-                <li><a href="#pantalla-2">Pantalla 2</a></li>
-                <li><a href="#pantalla-3">Pantalla 3</a></li>
-                <li><a href="#pantalla-5">Pantalla 5</a></li>
-                <li><a href="#pantalla-6">Pantalla 6</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ================= PANTALLA 5 ================= -->
-    <div data-role="page" id="pantalla-5">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 5</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-4">← Regresar</a>
-            </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-1">Pantalla 1</a></li>
-                <li><a href="#pantalla-2">Pantalla 2</a></li>
-                <li><a href="#pantalla-3">Pantalla 3</a></li>
-                <li><a href="#pantalla-4">Pantalla 4</a></li>
-                <li><a href="#pantalla-6">Pantalla 6</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- ================= PANTALLA 6 ================= -->
-    <div data-role="page" id="pantalla-6">
-        <div data-role="main" class="ui-content contenedor-principal">
-            <h1 class="titulo-pantalla">Pantalla 6</h1>
-            <div class="btn-regresar">
-                <a href="#pantalla-5">← Regresar</a>
-            </div>
-            <ul data-role="listview" data-inset="true">
-                <li><a href="#pantalla-1">Pantalla 1</a></li>
-                <li><a href="#pantalla-2">Pantalla 2</a></li>
-                <li><a href="#pantalla-3">Pantalla 3</a></li>
-                <li><a href="#pantalla-4">Pantalla 4</a></li>
-                <li><a href="#pantalla-5">Pantalla 5</a></li>
-            </ul>
         </div>
     </div>
 
