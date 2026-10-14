@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Aplicación - Pantalla 2</title>
+    <title>Mi Aplicación Multi-pantalla</title>
 
-    <!-- 1. CORREGIDO: Carga el CSS directamente desde la raíz -->
+    <!-- Carga de archivos locales de jQuery Mobile en la raíz de tu GitHub -->
     <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
-    
-    <!-- 2. CORREGIDO: Carga el JavaScript base desde tu raíz (aquí usamos el que tienes subido) -->
     <script src="jquery.mobile-1.4.5.js"></script>
-    
-    <!-- 3. CORREGIDO: Carga las funciones lógicas de jQuery Mobile desde tu raíz -->
     <script src="jquery.mobile-1.4.5.min.js"></script>
     
     <style>
-        /* Estilos personalizados para que se vea limpio y espaciado como en la imagen */
+        /* Estilos globales para mantener el diseño idéntico al ejemplo */
         .titulo-pantalla {
             font-size: 28px !important;
             font-weight: bold !important;
@@ -31,32 +27,113 @@
 </head>
 <body>
 
-    <!-- Definición de la Pantalla 2 -->
-    <div data-role="page" id="pantalla-2">
-
-        <!-- Contenido principal -->
+    <!-- ================= PANTALLA 1 ================= -->
+    <div data-role="page" id="pantalla-1">
         <div data-role="main" class="ui-content contenedor-principal">
-            
-            <!-- Título de la pantalla -->
-            <h1 class="titulo-pantalla">Pantalla 2</h1>
-
-            <!-- Botón de Regresar estilizado -->
+            <h1 class="titulo-pantalla">Pantalla 1</h1>
+            <!-- Como es la primera pantalla, su botón "Regresar" apunta a la Pantalla 6 o última visitada -->
             <div class="btn-regresar">
-                <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-initial">Regresar</a>
+                <a href="#pantalla-6" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-
-            <!-- Lista de navegación (ListView) con flechas automáticas -->
+            <!-- Lista excluyendo la Pantalla 1 -->
             <ul data-role="listview" data-inset="true">
-                <li><a href="#">Pantalla 1</a></li>
-                <li><a href="#">Pantalla 2</a></li>
-                <li><a href="#">Pantalla 3</a></li>
-                <li><a href="#">Pantalla 4</a></li>
-                <li><a href="#">Pantalla 5</a></li>
-                <li><a href="#">Pantalla 6</a></li>
+                <li><a href="#pantalla-2">Pantalla 2</a></li>
+                <li><a href="#pantalla-3">Pantalla 3</a></li>
+                <li><a href="#pantalla-4">Pantalla 4</a></li>
+                <li><a href="#pantalla-5">Pantalla 5</a></li>
+                <li><a href="#pantalla-6">Pantalla 6</a></li>
             </ul>
-
         </div>
+    </div>
 
+    <!-- ================= PANTALLA 2 ================= -->
+    <div data-role="page" id="pantalla-2">
+        <div data-role="main" class="ui-content contenedor-principal">
+            <h1 class="titulo-pantalla">Pantalla 2</h1>
+            <div class="btn-regresar">
+                <a href="#pantalla-1" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
+            </div>
+            <!-- Lista excluyendo la Pantalla 2 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pantalla-1">Pantalla 1</a></li>
+                <li><a href="#pantalla-3">Pantalla 3</a></li>
+                <li><a href="#pantalla-4">Pantalla 4</a></li>
+                <li><a href="#pantalla-5">Pantalla 5</a></li>
+                <li><a href="#pantalla-6">Pantalla 6</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= PANTALLA 3 ================= -->
+    <div data-role="page" id="pantalla-3">
+        <div data-role="main" class="ui-content contenedor-principal">
+            <h1 class="titulo-pantalla">Pantalla 3</h1>
+            <div class="btn-regresar">
+                <a href="#pantalla-2" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
+            </div>
+            <!-- Lista excluyendo la Pantalla 3 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pantalla-1">Pantalla 1</a></li>
+                <li><a href="#pantalla-2">Pantalla 2</a></li>
+                <li><a href="#pantalla-4">Pantalla 4</a></li>
+                <li><a href="#pantalla-5">Pantalla 5</a></li>
+                <li><a href="#pantalla-6">Pantalla 6</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= PANTALLA 4 ================= -->
+    <div data-role="page" id="pantalla-4">
+        <div data-role="main" class="ui-content contenedor-principal">
+            <h1 class="titulo-pantalla">Pantalla 4</h1>
+            <div class="btn-regresar">
+                <a href="#pantalla-3" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
+            </div>
+            <!-- Lista excluyendo la Pantalla 4 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pantalla-1">Pantalla 1</a></li>
+                <li><a href="#pantalla-2">Pantalla 2</a></li>
+                <li><a href="#pantalla-3">Pantalla 3</a></li>
+                <li><a href="#pantalla-5">Pantalla 5</a></li>
+                <li><a href="#pantalla-6">Pantalla 6</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= PANTALLA 5 ================= -->
+    <div data-role="page" id="pantalla-5">
+        <div data-role="main" class="ui-content contenedor-principal">
+            <h1 class="titulo-pantalla">Pantalla 5</h1>
+            <div class="btn-regresar">
+                <a href="#pantalla-4" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
+            </div>
+            <!-- Lista excluyendo la Pantalla 5 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pantalla-1">Pantalla 1</a></li>
+                <li><a href="#pantalla-2">Pantalla 2</a></li>
+                <li><a href="#pantalla-3">Pantalla 3</a></li>
+                <li><a href="#pantalla-4">Pantalla 4</a></li>
+                <li><a href="#pantalla-6">Pantalla 6</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ================= PANTALLA 6 ================= -->
+    <div data-role="page" id="pantalla-6">
+        <div data-role="main" class="ui-content contenedor-principal">
+            <h1 class="titulo-pantalla">Pantalla 6</h1>
+            <div class="btn-regresar">
+                <a href="#pantalla-5" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
+            </div>
+            <!-- Lista excluyendo la Pantalla 6 -->
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pantalla-1">Pantalla 1</a></li>
+                <li><a href="#pantalla-2">Pantalla 2</a></li>
+                <li><a href="#pantalla-3">Pantalla 3</a></li>
+                <li><a href="#pantalla-4">Pantalla 4</a></li>
+                <li><a href="#pantalla-5">Pantalla 5</a></li>
+            </ul>
+        </div>
     </div>
 
 </body>
