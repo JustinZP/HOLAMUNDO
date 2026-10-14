@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalla 2</title>
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.1.min.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link href="https://googleapis.com" rel="stylesheet">
+    <style>
+        body, .ui-page { font-family: 'Poppins', sans-serif !important; background: linear-gradient(135deg, #10b981, #047857) !important; }
+        .ui-header { background: rgba(255, 255, 255, 0.1) !important; border: none !important; backdrop-filter: blur(10px); }
+        .ui-header .ui-title { color: #ffffff !important; font-weight: 600 !important; text-shadow: none !important; }
+        .ui-header .ui-btn-left { background: rgba(255, 255, 255, 0.2) !important; color: #ffffff !important; border: 1px solid rgba(255, 255, 255, 0.3) !important; border-radius: 8px !important; text-shadow: none !important; font-weight: 600 !important; box-shadow: none !important; }
+        .tarjeta-info { background: rgba(255, 255, 255, 0.95); padding: 30px 20px; border-radius: 20px; margin: 50px auto 0 auto; max-width: 400px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); text-align: center; }
+        .tarjeta-info h2 { color: #047857; font-weight: 600; }
+        .ui-footer { background: #ffffff !important; border: none !important; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+        .ui-navbar th a, .ui-navbar li a { background: #ffffff !important; color: #6b7280 !important; text-shadow: none !important; font-weight: 600 !important; border: none !important; padding: 15px 0 !important; }
+        .ui-navbar li a.ui-btn-active { color: #10b981 !important; border-bottom: 3px solid #10b981 !important; }
+    </style>
+</head>
+<body>
+
+    <div data-role="page" id="p2">
+        <div data-role="header" data-position="fixed">
+            <a href="pantalla1.html" data-icon="arrow-l" class="ui-btn-left">Volver</a>
+            <h1>PANTALLA 2</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="tarjeta-info">
+                <h2>Sección 2 📊</h2>
+                <p>Estás visualizando las métricas y reportes analíticos.</p>
+            </div>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="index.html" data-icon="home">Inicio</a></li>
+                    <li><a href="pantalla1.html" data-icon="grid">Pantalla1</a></li>
+                    <li><a href="pantalla2.html" data-icon="grid" class="ui-btn-active ui-state-persist">Pantalla2</a></li>
+                    <li><a href="pantalla3.html" data-icon="grid">Pantalla3</a></li>
+                    <li><a href="pantalla4.html" data-icon="grid">Pantalla4</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
