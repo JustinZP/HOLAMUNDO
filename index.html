@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Aplicación Multi-pantalla</title>
 
-    <!-- Carga de archivos locales de jQuery Mobile en la raíz de tu GitHub -->
-    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
-    <script src="jquery.mobile-1.4.5.js"></script>
-    <script src="jquery.mobile-1.4.5.min.js"></script>
+    <!-- ENLACES EN LÍNEA: Cargan la librería directo de internet para que funcione sí o sí -->
+    <link rel="stylesheet" href="https://jquery.com">
+    <script src="https://jquery.com"></script>
+    <script src="https://jquery.com"></script>
     
     <style>
         /* Estilos globales para mantener el diseño idéntico al ejemplo */
@@ -31,11 +31,9 @@
     <div data-role="page" id="pantalla-1">
         <div data-role="main" class="ui-content contenedor-principal">
             <h1 class="titulo-pantalla">Pantalla 1</h1>
-            <!-- Como es la primera pantalla, su botón "Regresar" apunta a la Pantalla 6 o última visitada -->
             <div class="btn-regresar">
                 <a href="#pantalla-6" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 1 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-2">Pantalla 2</a></li>
                 <li><a href="#pantalla-3">Pantalla 3</a></li>
@@ -53,7 +51,6 @@
             <div class="btn-regresar">
                 <a href="#pantalla-1" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 2 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-1">Pantalla 1</a></li>
                 <li><a href="#pantalla-3">Pantalla 3</a></li>
@@ -71,7 +68,6 @@
             <div class="btn-regresar">
                 <a href="#pantalla-2" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 3 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-1">Pantalla 1</a></li>
                 <li><a href="#pantalla-2">Pantalla 2</a></li>
@@ -89,7 +85,6 @@
             <div class="btn-regresar">
                 <a href="#pantalla-3" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 4 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-1">Pantalla 1</a></li>
                 <li><a href="#pantalla-2">Pantalla 2</a></li>
@@ -107,7 +102,6 @@
             <div class="btn-regresar">
                 <a href="#pantalla-4" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 5 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-1">Pantalla 1</a></li>
                 <li><a href="#pantalla-2">Pantalla 2</a></li>
@@ -125,7 +119,6 @@
             <div class="btn-regresar">
                 <a href="#pantalla-5" class="ui-btn ui-corner-all ui-shadow">Regresar</a>
             </div>
-            <!-- Lista excluyendo la Pantalla 6 -->
             <ul data-role="listview" data-inset="true">
                 <li><a href="#pantalla-1">Pantalla 1</a></li>
                 <li><a href="#pantalla-2">Pantalla 2</a></li>
